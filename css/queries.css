@@ -1,0 +1,136 @@
+/* rem and em do NOT depend on html font-size in media queries
+Instead, 1rem = 1em = 16px */
+
+/* ***************************** */
+/* BELOW 94*16= 1504px (larger desktops) */
+/* ***************************** */
+/* 1500/16= 93.75 = 94em */
+@media (max-width: 94em) {
+	.pin-board {
+		grid-template-columns: repeat(5, 235px);
+	}
+}
+
+/* ***************************** */
+/* BELOW 80*16= 1504px  */
+/* ***************************** */
+/* 1268/16=79.25  80em*/
+@media (max-width: 80em) {
+	.pin-board {
+		grid-template-columns: repeat(4, 235px);
+	}
+	.your-pins {
+		padding-right: 1.2rem;
+	}
+}
+
+/* ***************************** */
+/* BELOW 63*16= 1008px  */
+/* ***************************** */
+/* 1008/16=63  63em */
+@media (max-width: 63em) {
+	.pin-board {
+		grid-template-columns: repeat(3, 235px);
+	}
+	html {
+		font-size: 56.25%;
+	}
+	.pin-imgs {
+		height: 18rem;
+	}
+	.pin-item {
+		height: 26rem;
+	}
+}
+
+/* ***************************** */
+/* BELOW 51*16= 816px  */
+/* ***************************** */
+.nav-home {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+.nav-home-arrow {
+	display: none;
+	color: #222;
+}
+@media (max-width: 51em) {
+	.nav-explore,
+	.nav-create {
+		display: none;
+	}
+	.nav-home-arrow {
+		display: block;
+	}
+	.nav-home {
+		padding: 0.8rem 1.2rem;
+		border-radius: 50px;
+	}
+	.nav-home:hover {
+		background-color: #eee;
+	}
+}
+
+/* ***************************** */
+/* BELOW 47*16= 752px  */
+/* ***************************** */
+@media (max-width: 47em) {
+	html {
+		font-size: 50%;
+	}
+	.pin-board {
+		grid-template-columns: repeat(2, 235px);
+	}
+	.your-pins {
+		font-size: 1.4rem;
+	}
+	.pin-imgs {
+		height: 19rem;
+	}
+	.nav {
+		gap: 0;
+		padding: 0 1.2rem;
+	}
+}
+
+/* ***************************** */
+/* BELOW 31*16= 496px  */
+/* ***************************** */
+@media (max-width: 31em) {
+	.search input::placeholder {
+		font-size: 1.4rem;
+	}
+	.search-icon {
+		margin: 0 0.9rem;
+	}
+	.your-pins,
+	.search-divider {
+		display: none;
+	}
+	.nav-link:link {
+		margin: 0 0.5rem;
+	}
+	.notification-hover-box,
+	.pin-board {
+		grid-template-columns: repeat(1, 235px);
+	}
+	.pin-imgs {
+		height: 21rem;
+	}
+	.pin-item {
+		height: 27rem;
+	}
+	.all-pins-imgs div {
+		width: 23rem;
+	}
+}
+
+/* ***************************** */
+/* BELOW 25*16= 400px  */
+/* ***************************** */
+@media (max-width: 25em) {
+	.nav-home {
+		display: none;
+	}
+}

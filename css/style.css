@@ -1,0 +1,593 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* default: 16px. But we want 1rem=10px, so we do 10/16 = 0.625,  62.5%.  So now 1 rem = 10px */
+	font-size: 62.5%;
+}
+
+body {
+	padding: 0 0 6.4rem 0;
+}
+
+body,
+button {
+	font-weight: 500;
+	font-family: "Roboto", sans-serif;
+	color: #111;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* STICKY NAV: */
+/* .sticky-nav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+} */
+
+/* ***************************** */
+/*          NAVIGATION           */
+/* ***************************** */
+.nav {
+	display: flex;
+	align-items: center;
+	height: 8rem;
+	padding: 0 3.2rem;
+	gap: 1rem;
+	background-color: #fff;
+	font-size: 1.6rem;
+	/* z-index: 1; */
+	width: 100%;
+}
+
+.nav-link:link,
+.nav-link:visited {
+	color: #222;
+	text-decoration: none;
+	font-weight: 500;
+	margin: 0 2rem;
+}
+
+.nav-icon {
+	width: 2.4rem;
+	height: 2.4rem;
+	color: #777;
+}
+
+.logo {
+	color: rgb(224, 15, 15);
+	width: 3rem;
+	height: 3rem;
+}
+
+.nav-R:link,
+.nav-R:visited {
+	/* display: inline-block; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+
+	color: #333;
+	background-color: #ddd;
+	border: 2px solid #333;
+	width: 0.8rem;
+	height: 0.8rem;
+	padding: 1.6rem;
+	border-radius: 50%;
+}
+
+.nav-hover {
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.nav-hover:hover,
+.nav-arrow:hover {
+	background-color: #ddd;
+}
+.nav-arrow {
+	height: 2rem;
+	width: 2rem;
+	padding: 0.6rem;
+	border-radius: 50%;
+}
+
+/****** SEARCH BOX *******/
+.search {
+	display: flex;
+	align-items: center;
+	background-color: #eee;
+	border-radius: 50px;
+	height: 5rem;
+	width: 100%;
+}
+.search:hover {
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+.search-box,
+.your-pins {
+	background: none;
+	border: none;
+}
+.search-box {
+	height: 100%;
+	width: 100%;
+	/* width: 100%; */
+	/* padding: 1.2rem; */
+}
+.search-divider {
+	background-color: #c3c3c3;
+	width: 3px;
+	height: 70%;
+	margin-right: 1.2rem;
+	border-radius: 50px;
+}
+
+.search input::placeholder {
+	font-weight: 500;
+	font-size: 1.6rem;
+}
+.search-icon {
+	width: 2.8rem;
+	height: 2.8rem;
+	/* height: 100%; */
+	margin: 0 1.6rem;
+}
+
+.your-pins {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+	height: 100%;
+	width: 14rem;
+	white-space: nowrap;
+}
+.your-pins:hover {
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+.your-pins-arrow {
+	margin-left: 0.3rem;
+}
+/* ***********HOVER BOX EFFECT*********** */
+/* drop-down hover text */
+.notification-hover-box,
+.message-hover-box,
+.arrow-hover-box {
+	position: relative;
+}
+.notification-hover-box::after,
+.message-hover-box::after,
+.arrow-hover-box::after {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 1.2rem);
+	background-color: #111;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 400;
+	padding: 1rem;
+	border-radius: 10px;
+	text-align: center;
+}
+.arrow-hover-box::after {
+	transform: translate(-85%, 1.6rem);
+	width: 15rem;
+}
+.notification-hover-box::after {
+	content: "Notifications";
+}
+.message-hover-box::after {
+	content: "Messages";
+}
+.arrow-hover-box::after {
+	content: "Account and more options";
+}
+.notification-hover-box:hover.notification-hover-box::after,
+.message-hover-box:hover.message-hover-box::after,
+.arrow-hover-box:hover.arrow-hover-box::after {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* ***************************** */
+/*          PROFILE              */
+/* ***************************** */
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.4rem;
+	width: 25rem;
+	margin: 2rem auto;
+}
+.profile-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile-letter {
+	font-size: 5.2rem;
+	background-color: #ddd;
+	width: 12.8rem;
+	height: 12.8rem;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+
+.profile-name {
+	font-size: 3.6rem;
+}
+.profile-name--lock {
+	height: 2.4rem;
+	width: 2.4rem;
+}
+
+.profile-username {
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: #777;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.profile-username--logo {
+	height: 1.8rem;
+	width: 1.8rem;
+}
+
+.followers {
+	font-size: 1.6rem;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+}
+
+.profile-btns {
+	display: flex;
+	gap: 1rem;
+}
+.profile-btn {
+	border: none;
+	background-color: #eee;
+	font-size: 1.6rem;
+	padding: 1.6rem 2.4rem;
+	border-radius: 50px;
+}
+.profile-btn:hover {
+	cursor: pointer;
+	background-color: #ddd;
+}
+
+/* ***************************** */
+/*      CREATED AND SAVED        */
+/* ***************************** */
+.pins--created-saved {
+	display: flex;
+	justify-content: center;
+	gap: 3.2rem;
+	margin-top: 1.6rem;
+}
+.pins-created,
+.pins-saved {
+	border: none;
+	background: none;
+	font-size: 1.6rem;
+	padding: 1.2rem 1.2rem;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+/* *****THIS IS FOR THE LITTLE LINE UNDER 'SAVED': ******/
+/* .pins-saved {
+	padding: 0.8rem 0;
+	border-bottom: 3px solid #222;
+} */
+.pins-saved {
+	position: relative;
+}
+.pins-saved::after {
+	content: "";
+	position: absolute;
+	height: 0.3rem;
+	width: 4.8rem;
+	background-color: #222;
+	bottom: -0.2rem;
+	left: 1rem;
+	border-radius: 20px;
+}
+
+.pins-created:hover {
+	background-color: #eee;
+}
+
+/* ***************************** */
+/*    PIN BOARDS COLLECTION      */
+/* ***************************** */
+.icons-above-pins {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.6rem 1.6rem;
+}
+.icon-above {
+	height: 3rem;
+	width: 3rem;
+	padding: 0.8rem;
+	border-radius: 50%;
+}
+.icon-above:hover {
+	background-color: #eee;
+	cursor: pointer;
+}
+
+/* ---------  */
+/* PIN BOARD: */
+/* ---------  */
+
+.pin-board {
+	display: grid;
+	grid-template-columns: repeat(6, 235px);
+	gap: 1.6rem;
+	margin: 0 1.6rem;
+	justify-content: center;
+}
+
+.pin-item {
+	border-radius: 18px;
+	overflow: hidden;
+	height: 22rem;
+}
+.pin-item:hover {
+	cursor: pointer;
+}
+.pin-imgs {
+	height: 16rem;
+	border-radius: 18px;
+	overflow: hidden;
+}
+
+/* rgba(25, 25, 25, 0.6), */
+
+.pin-imgs:hover {
+	filter: brightness(60%);
+	transition: 0.2s;
+}
+
+.pin-text {
+	padding: 0.8rem 0 0 1.4rem;
+}
+.pin-header {
+	font-size: 2rem;
+}
+.pin-info {
+	display: flex;
+	gap: 1rem;
+	padding-top: 0.6rem;
+}
+.pin-total {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+.pin-time {
+	color: #888;
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+
+/* ---------------- */
+/* ALL-PINS FORMAT */
+/* ---------------- */
+.all-pins-imgs {
+	position: relative;
+}
+.all-pins-imgs div {
+	height: 100%;
+	width: 18rem;
+	position: absolute;
+	border-radius: 18px;
+	border: 1px solid #fff;
+}
+
+.all-pins--img-1 {
+	background-image: url(../img/all-pins/img-1.jpg);
+	background-size: cover;
+	right: 11.2rem;
+}
+.all-pins--img-2 {
+	background-image: url(../img/all-pins/img-2.jpg);
+	background-size: cover;
+	right: 8.4rem;
+}
+.all-pins--img-3 {
+	background-image: url(../img/all-pins/img-3.jpg);
+	background-size: cover;
+	right: 5.6rem;
+}
+.all-pins--img-4 {
+	background-image: url(../img/all-pins/img-4.jpg);
+	background-size: cover;
+	right: 2.8rem;
+}
+.all-pins--img-5 {
+	background-image: url(../img/all-pins/img-5.jpg);
+	background-size: cover;
+	right: 0;
+}
+
+/* 3 PIN IMAGE COLLECTION */
+.three-pin-imgs {
+	display: grid;
+	/* grid-template-columns: repeat(3, 1fr); */
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr;
+	gap: 1px;
+}
+
+.img-one {
+	background-size: cover;
+	grid-column: 1/3;
+	grid-row: 1/-1;
+}
+.img-two {
+	background-size: cover;
+	grid-column: 3/4;
+	grid-row: 1/2;
+}
+.img-three {
+	background-size: cover;
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+
+/* First pin board: */
+.img-one--one {
+	background-image: url(../img/pin-collection-1/1--img-1.jpg);
+}
+.img-two--one {
+	background-image: url(../img/pin-collection-1/1--img-2.jpg);
+}
+.img-three--one {
+	background-image: url(../img/pin-collection-1/1--img-3.jpg);
+}
+/* Second pin board: */
+.img-one--two {
+	background-image: url(../img/pin-collection-2/2--img-1.jpg);
+}
+.img-two--two {
+	background-image: url(../img/pin-collection-2/2--img-2.jpg);
+}
+.img-three--two {
+	background-image: url(../img/pin-collection-2/2--img-3.jpg);
+}
+/* Third pin board: */
+.img-one--three {
+	background-image: url(../img/pin-collection-3/3--img-1.jpg);
+}
+.img-two--three {
+	background-image: url(../img/pin-collection-3/3--img-2.jpg);
+}
+.img-three--three {
+	background-image: url(../img/pin-collection-3/3--img-3.jpg);
+}
+/* Fourth pin board: */
+.img-one--four {
+	background-image: url(../img/pin-collection-4/4--img-1.jpg);
+}
+.img-two--four {
+	background-image: url(../img/pin-collection-4/4--img-2.jpg);
+}
+.img-three--four {
+	background-image: url(../img/pin-collection-4/4--img-3.jpg);
+}
+/* Fifth pin board: */
+.img-one--five {
+	background-image: url(../img/pin-collection-5/5--img-1.jpg);
+}
+.img-two--five {
+	background-image: url(../img/pin-collection-5/5--img-2.jpg);
+}
+.img-three--five {
+	background-image: url(../img/pin-collection-5/5--img-3.jpg);
+}
+/* Sixth pin board: */
+.img-one--six {
+	background-image: url(../img/pin-collection-6/6--img-1.jpg);
+}
+.img-two--six {
+	background-image: url(../img/pin-collection-6/6--img-2.jpg);
+}
+.img-three--six {
+	background-image: url(../img/pin-collection-6/6--img-3.jpg);
+}
+/* seventh pin board: */
+.img-one--seven {
+	background-image: url(../img/pin-collection-7/7--img-1.jpg);
+}
+.img-two--seven {
+	background-image: url(../img/pin-collection-7/7--img-2.jpg);
+}
+.img-three--seven {
+	background-image: url(../img/pin-collection-7/7--img-3.jpg);
+}
+/* eighth pin board: */
+.img-one--eight {
+	background-image: url(../img/pin-collection-8/8--img-1.jpg);
+}
+.img-two--eight {
+	background-image: url(../img/pin-collection-8/8--img-2.jpg);
+}
+.img-three--eight {
+	background-image: url(../img/pin-collection-8/8--img-3.jpg);
+}
+/* eighth pin board: */
+.img-one--nine {
+	background-image: url(../img/pin-collection-9/9--img-1.jpg);
+}
+.img-two--nine {
+	background-image: url(../img/pin-collection-9/9--img-2.jpg);
+}
+.img-three--nine {
+	background-image: url(../img/pin-collection-9/9--img-3.jpg);
+}
+
+/* HELP BUTTON */
+.help-btn {
+	position: fixed;
+	border: none;
+	background-color: #fff;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.153);
+	border-radius: 50%;
+	padding: 1.2rem;
+	right: 2.4rem;
+	bottom: 2rem;
+	cursor: pointer;
+}
+.help-icon {
+	width: 3rem;
+	height: 3rem;
+}
+.help-btn::after {
+	content: "Help";
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+	background-color: #111;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 400;
+	padding: 1rem;
+	border-radius: 10px;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -7rem);
+}
+.help-btn:hover.help-btn::after {
+	opacity: 1;
+	pointer-events: auto;
+}

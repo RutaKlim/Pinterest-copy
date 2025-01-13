@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="img/Pinterest-logo.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/queries.css" />
+
+		<title>Pinterest</title>
+	</head>
+
+	<body>
+		<nav class="nav sticky-nav">
+			<div>
+				<ion-icon
+					class="logo nav-icon nav-hover"
+					name="logo-pinterest"></ion-icon>
+			</div>
+			<div>
+				<a class="nav-link nav-home" href="#"
+					>Home<ion-icon
+						class="nav-icon nav-home-arrow"
+						name="chevron-down"></ion-icon
+				></a>
+			</div>
+			<div><a class="nav-link nav-explore" href="#">Explore</a></div>
+			<div><a class="nav-link nav-create" href="#">Create</a></div>
+			<div class="search">
+				<ion-icon class="nav-icon search-icon" name="search"></ion-icon>
+				<input
+					class="search-box"
+					name="search-your-pins"
+					type="text"
+					placeholder="Search your Pins" />
+				<span class="search-divider"></span>
+				<button class="your-pins">
+					<span class="your-pins-text">Your Pins</span
+					><ion-icon
+						class="nav-icon your-pins-arrow"
+						name="chevron-down"></ion-icon>
+				</button>
+			</div>
+			<div>
+				<a href="#" class="notification-hover-box"
+					><ion-icon class="nav-icon nav-hover" name="notifications"></ion-icon
+				></a>
+			</div>
+			<div>
+				<a href="#" class="message-hover-box"
+					><ion-icon
+						class="nav-icon nav-hover"
+						name="chatbubble-ellipses"></ion-icon
+				></a>
+			</div>
+			<div>
+				<div class="nav-hover">
+					<a class="nav-R" href="#">R</a>
+				</div>
+			</div>
+			<div>
+				<a href="#" class="arrow-hover-box"
+					><ion-icon class="nav-icon nav-arrow" name="chevron-down"></ion-icon
+				></a>
+			</div>
+		</nav>
+
+		<div class="profile-center">
+			<section class="profile">
+				<div class="profile-letter">R</div>
+				<div class="profile-name">
+					<span>Rutaklim</span
+					><ion-icon class="profile-name--lock" name="lock-closed"></ion-icon>
+				</div>
+				<div class="profile-username">
+					<ion-icon
+						class="profile-username--logo"
+						name="logo-pinterest"></ion-icon
+					><span class="profile-username">rutaklim</span>
+				</div>
+				<div class="followers">3 followers &middot; 3 following</div>
+				<div class="profile-btns">
+					<button class="profile-btn">Share</button>
+					<button class="profile-btn">Edit profile</button>
+				</div>
+			</section>
+		</div>
+
+		<header class="pins--created-saved">
+			<button class="pins-created">Created</button>
+			<button class="pins-saved">Saved</button>
+		</header>
+
+		<div class="icons-above-pins">
+			<ion-icon class="icon-above" name="options"></ion-icon>
+			<ion-icon class="icon-above" name="add"></ion-icon>
+		</div>
+
+		<section class="pin-board">
+			<!-- All pins: -->
+			<a href="#" class="all-pins pin-item">
+				<figure class="all-pins-imgs pin-imgs">
+					<div class="all-pins--img-5" role="img"></div>
+					<div class="all-pins--img-4" role="img"></div>
+					<div class="all-pins--img-3" role="img"></div>
+					<div class="all-pins--img-2" role="img"></div>
+					<div class="all-pins--img-1" role="img"></div>
+					<!-- <img
+					class="all-pins--img-5"
+					src="img/all-pins/img-5.jpg"
+					alt="old aesthetic english street" />
+					<img
+					class="all-pins--img-4"
+					src="img/all-pins/img-4.jpg"
+					alt="cozy bedroom" />
+					<img
+					class="all-pins--img-3"
+					src="img/all-pins/img-3.jpg"
+					alt="girl wearing a scarf" />
+					<img
+						class="all-pins--img-2"
+						src="img/all-pins/img-2.jpg"
+						alt="japanese style bowl of noodles" />
+					<img
+						class="all-pins--img-1"
+						src="img/all-pins/img-1.jpg"
+						alt="a cluttered table with flowers and jewelry" /> -->
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">All Pins</header>
+					<div class="pin-info">
+						<div class="pin-total">939 Pins</div>
+						<div class="pin-time">1 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- First pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--one"
+						role="img"
+						aria-label="eastern asian dumplings in soup"></div>
+					<div
+						class="img-two img-two--one"
+						role="img"
+						aria-label="lot's of fruit"></div>
+					<div
+						class="img-three img-three--one"
+						role="img"
+						aria-label="lithuanian Šaltibarščiai (pink soup)"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">Food</header>
+					<div class="pin-info">
+						<div class="pin-total">74 Pins</div>
+						<div class="pin-time">1 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- Second pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--two"
+						role="img"
+						aria-label="cozy bedroom at evening"></div>
+					<div
+						class="img-two img-two--two"
+						role="img"
+						aria-label="bedroom in morning light"></div>
+					<div
+						class="img-three img-three--two"
+						role="img"
+						aria-label="cozy bedroom at eveneing"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">Room Ideas</header>
+					<div class="pin-info">
+						<div class="pin-total">26 Pins</div>
+						<div class="pin-time">3 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- Third pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--three"
+						role="img"
+						aria-label="a girl ponytail with three braids"></div>
+					<div
+						class="img-two img-two--three"
+						role="img"
+						aria-label="a girl with two dutch-plattes into a messy bun"></div>
+					<div
+						class="img-three img-three--three"
+						role="img"
+						aria-label="blonde curly hair with a claw clip"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">Hairstyles</header>
+					<div class="pin-info">
+						<div class="pin-total">34 Pins</div>
+						<div class="pin-time">3 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- Fourth pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--four"
+						role="img"
+						aria-label="girl wearing a red sweater with blue jeans"></div>
+					<div
+						class="img-two img-two--four"
+						role="img"
+						aria-label="girl wearing a blue top with white linen trousers"></div>
+					<div
+						class="img-three img-three--four"
+						role="img"
+						aria-label="girl wearing a light blue sweater with a brown bag"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">Outfit Ideas</header>
+					<div class="pin-info">
+						<div class="pin-total">255 Pins</div>
+						<div class="pin-time">3 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- Fifth pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--five"
+						role="img"
+						aria-label="drawing of a person in blue crayon with a blue background"></div>
+					<div
+						class="img-two img-two--five"
+						role="img"
+						aria-label="painting of four glass bottles"></div>
+					<div
+						class="img-three img-three--five"
+						role="img"
+						aria-label="painting of an elegant white cat"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">Art Inspo</header>
+					<div class="pin-info">
+						<div class="pin-total">62 Pins</div>
+						<div class="pin-time">4 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- sixth pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--six"
+						role="img"
+						aria-label="hogwarts castle"></div>
+					<div
+						class="img-two img-two--six"
+						role="img"
+						aria-label="inside the harry potter train"></div>
+					<div
+						class="img-three img-three--six"
+						role="img"
+						aria-label="boy looking outside train, while going over a bridge in the countryside"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">Harry Potter</header>
+					<div class="pin-info">
+						<div class="pin-total">19 Pins</div>
+						<div class="pin-time">5 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- seventh pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--seven"
+						role="img"
+						aria-label="bowl of noodles with egg"></div>
+					<div
+						class="img-two img-two--seven"
+						role="img"
+						aria-label="cucumber wrapped with salmon resembling sushi"></div>
+					<div
+						class="img-three img-three--seven"
+						role="img"
+						aria-label="plate of decorated sushi"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">Sushi and noodles :D</header>
+					<div class="pin-info">
+						<div class="pin-total">26 Pins</div>
+						<div class="pin-time">5 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- Eighth pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--eight"
+						role="img"
+						aria-label="multi-media art of jellyfish"></div>
+					<div
+						class="img-two img-two--eight"
+						role="img"
+						aria-label="art page study of a pomegranate"></div>
+					<div
+						class="img-three img-three--eight"
+						role="img"
+						aria-label="red veins in the shape of a hand"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">A-level art</header>
+					<div class="pin-info">
+						<div class="pin-total">38 Pins</div>
+						<div class="pin-time">6 mo</div>
+					</div>
+				</div>
+			</a>
+			<!-- ninth pin board: -->
+			<a href="#" class="three-pin-item pin-item">
+				<figure class="three-pin-imgs pin-imgs">
+					<div
+						class="img-one img-one--nine"
+						role="img"
+						aria-label="big fluffy toy of a big hero six character: baymax"></div>
+					<div
+						class="img-two img-two--nine"
+						role="img"
+						aria-label="2 homemade sewn bags"></div>
+					<div
+						class="img-three img-three--nine"
+						role="img"
+						aria-label="little crocheted cat with a red sweater laid back"></div>
+				</figure>
+				<div class="pin-text">
+					<header class="pin-header">DIY</header>
+					<div class="pin-info">
+						<div class="pin-total">60 Pins</div>
+						<div class="pin-time">1 yr</div>
+					</div>
+				</div>
+			</a>
+		</section>
+		<button class="help-btn">
+			<ion-icon class="help-icon" name="help-outline"></ion-icon>
+		</button>
+
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>
