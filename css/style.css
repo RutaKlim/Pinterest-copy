@@ -32,6 +32,14 @@ a:visited {
 	top: 0;
 	bottom: 0;
 	width: 100%;
+	} */
+
+/* :FOCUS effects
+*:focus,
+.logo:focus,
+.focus-effect:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.6rem rgba(58, 118, 196, 0.553);
 } */
 
 /* ***************************** */
@@ -169,6 +177,7 @@ a:visited {
 .message-hover-box,
 .arrow-hover-box {
 	position: relative;
+	cursor: pointer;
 }
 .notification-hover-box::after,
 .message-hover-box::after,
@@ -176,6 +185,7 @@ a:visited {
 	position: absolute;
 	pointer-events: none;
 	opacity: 0;
+	visibility: hidden;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, 1.2rem);
@@ -188,6 +198,12 @@ a:visited {
 	border-radius: 10px;
 	text-align: center;
 }
+/* .notification-hover-box::after:focus,
+.message-hover-box::after:focus,
+.arrow-hover-box::after:focus {
+	outline: none;
+} */
+
 .arrow-hover-box::after {
 	transform: translate(-85%, 1.6rem);
 	width: 15rem;
@@ -205,7 +221,8 @@ a:visited {
 .message-hover-box:hover.message-hover-box::after,
 .arrow-hover-box:hover.arrow-hover-box::after {
 	opacity: 1;
-	pointer-events: auto;
+	pointer-events: none;
+	visibility: visible;
 }
 
 /* ***************************** */
@@ -565,6 +582,9 @@ a:visited {
 	right: 2.4rem;
 	bottom: 2rem;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .help-icon {
 	width: 3rem;
