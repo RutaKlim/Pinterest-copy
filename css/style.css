@@ -25,6 +25,11 @@ a:visited {
 	text-decoration: none;
 	color: inherit;
 }
+button,
+a {
+	border: none;
+	cursor: pointer;
+}
 
 /* STICKY NAV: */
 /* .sticky-nav {
@@ -34,14 +39,17 @@ a:visited {
 	width: 100%;
 	} */
 
-/* :FOCUS effects
-*:focus,
-.logo:focus,
-.focus-effect:focus {
+/* FOCUS EFFECTS */
+*:focus {
 	outline: none;
-	box-shadow: 0 0 0 0.6rem rgba(58, 118, 196, 0.553);
-} */
-
+	box-shadow: 0 0 0 0.6rem rgba(40, 92, 160, 0.488);
+}
+nav a {
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 /* ***************************** */
 /*          NAVIGATION           */
 /* ***************************** */
@@ -188,7 +196,7 @@ a:visited {
 	visibility: hidden;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, 1.2rem);
+	transform: translate(-50%, 2.6rem);
 	background-color: #111;
 	color: #fff;
 	font-family: "Roboto", sans-serif;
@@ -198,14 +206,9 @@ a:visited {
 	border-radius: 10px;
 	text-align: center;
 }
-/* .notification-hover-box::after:focus,
-.message-hover-box::after:focus,
-.arrow-hover-box::after:focus {
-	outline: none;
-} */
 
 .arrow-hover-box::after {
-	transform: translate(-85%, 1.6rem);
+	transform: translate(-85%, 2.6rem);
 	width: 15rem;
 }
 .notification-hover-box::after {
@@ -224,6 +227,35 @@ a:visited {
 	pointer-events: none;
 	visibility: visible;
 }
+/* ****** */
+/* .profile-name--lock {
+	position: relative;
+}
+.profile-name--lock::after {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+	visibility: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 2.6rem);
+	background-color: #111;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 400;
+	padding: 1rem;
+	border-radius: 10px;
+	text-align: center;
+	content: "Your profile is private";
+}
+.profile-name--lock:hover.profile-name--lock::after {
+	opacity: 1;
+	pointer-events: none;
+	visibility: visible;
+} */
+/* This is similar to what I did above but was not successful, so I will learn
+ JavaScript to achieve this as it also includes a link, so i will try this later. */
 
 /* ***************************** */
 /*          PROFILE              */
@@ -278,10 +310,15 @@ a:visited {
 }
 
 .followers {
+	display: flex;
+	gap: 0.4rem;
 	font-size: 1.6rem;
 	font-weight: 500;
 	letter-spacing: 0.5px;
 	cursor: pointer;
+}
+.followers button {
+	background: none;
 }
 
 .profile-btns {
@@ -574,7 +611,6 @@ a:visited {
 /* HELP BUTTON */
 .help-btn {
 	position: fixed;
-	border: none;
 	background-color: #fff;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.153);
 	border-radius: 50%;

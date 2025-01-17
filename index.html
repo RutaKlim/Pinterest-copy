@@ -18,22 +18,18 @@
 
 	<body>
 		<nav class="nav sticky-nav">
-			<div>
-				<a href="#">
-					<ion-icon
-						class="logo nav-icon nav-hover"
-						name="logo-pinterest"></ion-icon>
-				</a>
-			</div>
-			<div>
-				<a class="nav-link nav-home" href="#"
-					>Home<ion-icon
-						class="nav-icon nav-home-arrow"
-						name="chevron-down"></ion-icon
-				></a>
-			</div>
-			<div><a class="nav-link nav-explore" href="#">Explore</a></div>
-			<div><a class="nav-link nav-create" href="#">Create</a></div>
+			<a href="#">
+				<ion-icon
+					class="logo nav-icon nav-hover"
+					name="logo-pinterest"></ion-icon>
+			</a>
+			<a class="nav-link nav-home" href="#"
+				>Home<ion-icon
+					class="nav-icon nav-home-arrow"
+					name="chevron-down"></ion-icon
+			></a>
+			<a class="nav-link nav-explore" href="#">Explore</a>
+			<a class="nav-link nav-create" href="#">Create</a>
 			<div class="search">
 				<ion-icon class="nav-icon search-icon" name="search"></ion-icon>
 				<input
@@ -49,33 +45,27 @@
 						name="chevron-down"></ion-icon>
 				</button>
 			</div>
-			<div>
-				<a href="#" class="notification-hover-box"
-					><ion-icon class="nav-icon nav-hover" name="notifications"></ion-icon
-				></a>
-			</div>
-			<div>
-				<a href="#" class="message-hover-box"
-					><ion-icon
-						class="nav-icon nav-hover"
-						name="chatbubble-ellipses"></ion-icon
-				></a>
-			</div>
+			<a href="#" class="notification-hover-box"
+				><ion-icon class="nav-icon nav-hover" name="notifications"></ion-icon
+			></a>
+			<a href="#" class="message-hover-box"
+				><ion-icon
+					class="nav-icon nav-hover"
+					name="chatbubble-ellipses"></ion-icon
+			></a>
 			<div>
 				<div class="nav-hover">
 					<a class="nav-R" href="#">R</a>
 				</div>
 			</div>
-			<div>
-				<a href="#" class="arrow-hover-box"
-					><ion-icon class="nav-icon nav-arrow" name="chevron-down"></ion-icon
-				></a>
-			</div>
+			<a href="#" class="arrow-hover-box"
+				><ion-icon class="nav-icon nav-arrow" name="chevron-down"></ion-icon
+			></a>
 		</nav>
 
 		<div class="profile-center">
 			<section class="profile">
-				<div class="profile-letter">R</div>
+				<button class="profile-letter">R</button>
 				<div class="profile-name">
 					<span>Rutaklim</span
 					><ion-icon class="profile-name--lock" name="lock-closed"></ion-icon>
@@ -86,7 +76,11 @@
 						name="logo-pinterest"></ion-icon
 					><span class="profile-username">rutaklim</span>
 				</div>
-				<div class="followers">3 followers &middot; 3 following</div>
+				<div class="followers">
+					<button>3 followers</button>
+					<span>&middot;</span>
+					<button>3 following</button>
+				</div>
 				<div class="profile-btns">
 					<button class="profile-btn">Share</button>
 					<button class="profile-btn">Edit profile</button>
@@ -94,10 +88,10 @@
 			</section>
 		</div>
 
-		<header class="pins--created-saved">
+		<div class="pins--created-saved">
 			<button class="pins-created">Created</button>
 			<button class="pins-saved">Saved</button>
-		</header>
+		</div>
 
 		<div class="icons-above-pins">
 			<ion-icon class="icon-above" name="options"></ion-icon>
